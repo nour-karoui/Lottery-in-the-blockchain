@@ -18,15 +18,15 @@ eth-brownie, python-dotenv, pytest
 For me, I had to install a virtual environment before installing dependencies;
 check out this [link](https://stackoverflow.com/questions/69819421/importerror-no-module-named-solcx) for more details
 
-### Compile Contracts
+## Compile Contracts
 To compile the contracts, simply run this command:
 ```shell
     brownie compile
 ```
-### Deploy Contracts
+## Deploy Contracts
 Before deploying the contract, you first have to make sure to fill the .env file. Check .env.example
 
-##### Locally
+#### Locally
 run this command:
 ```shell
     ganache-cli
@@ -38,7 +38,7 @@ and then in another terminal, run this command
 **Here is the result of deploying the contract locally**
 ## <img width="736" alt="image" src="https://user-images.githubusercontent.com/47257753/207886837-379c7e3a-31d6-4b42-8b35-380d119ed80e.png">
 
-##### Testnet
+#### Testnet
 ```shell
     brownie run scripts/deploy_lottery.py --network goerli
 ```
@@ -47,20 +47,20 @@ and then in another terminal, run this command
 Here is the result of Deploying the contract on Goerli, you can verify it on [etherscan](https://goerli.etherscan.io/tx/0xf0994973fb6ca791b6bdb864700b42077a8938a447175ae1d591419c341e2f2c)
 ## <img width="739" alt="image" src="https://user-images.githubusercontent.com/47257753/207889441-318e2e17-210d-4889-94c2-80113d3deea3.png">
 
-##### RemixIDE
+#### RemixIDE
 Copy and paste the content of contracts/Lottery.sol in RemixIDE and play with it
 
-### Testing the functionalities
+## Testing the Contract's Functionalities
 To test the functionalities of our smart contract, you can first do that manually by going to scripts/deploy_lottery.py and uncomment the method calls, as shown in the screenshot below
 ## <img width="212" alt="image" src="https://user-images.githubusercontent.com/47257753/207891013-03412e8b-0f51-4713-b29b-8dab0c0afc57.png">
 and run the command
 ```shell
     brownie run scripts/deploy_lottery.py --network goerli
 ```
-#### Limitations
+### Limitations
 > Locally, end_lottery() and pick_winner() won't work because we are using contract deployed on the blockchain and for the VRFV2Wrapper there are no current mocks that we can use
 
-#### Automated Testing
+### Automated Testing
 **Unit Tests** will only run on a development local blockchain with this command
 ```shell
     brownie test -s
