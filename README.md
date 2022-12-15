@@ -2,7 +2,7 @@ HELLO <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master
 ---
 ## What is Lottery in the blockchain?
 
-It is a **decentralized app** hosted on *Goerli Testnet* built with Brownie Framework and Web3.py Library.
+It is a **decentralized app** hosted on **Goerli Testnet** built with ***Brownie Framework*** and ***Web3.py*** Library.
 
 1. The contract owner starts the lottery
 2. Gamblers can enter Lottery with ETH based on USD
@@ -10,8 +10,9 @@ It is a **decentralized app** hosted on *Goerli Testnet* built with Brownie Fram
 4. A winner is selected randomly, and he gets to win all the ether in the contract
 
 ## Install Dependencies
-In order to compile and deploy the contracts locally or on a testnet, you need to have ***Ganache and Metamask*** and also install these dependencies:  
-eth-brownie, python-dotenv, pytest
+#### In order to compile and deploy the contracts locally or on a testnet, you need to have ***Ganache and Metamask***
+
+Run this command to install dependencies:
 ```shell
     pip3 install eth-brownie python-dotenv pytest
 ```
